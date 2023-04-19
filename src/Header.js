@@ -92,11 +92,12 @@ export default function Header(){
                             <Nav.Link href="/contacts"> Contacts </Nav.Link>
                             <Nav.Link href="/blog"> Blog </Nav.Link>
                         </Nav>
-                        <Form className="d-flex">
+                        
+                        <Form className="d-flex justify-content-md-end">
                             <FormControl
                                 type ="text"
                                 placeholder="Search"
-                                className="me-sm-3"
+                                className="me-sm-1"
                             />
                             <Button variant="outline-info">Search</Button>
                             <Button className="ms-2" onClick={handleShow}>Login</Button>
