@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CarouselBoxHk from "../Components/CarouselBoxHk";
-import {Button, Card, CardImg, Container} from "react-bootstrap";
+import {Button, Card, Container} from "react-bootstrap";
+
 
 class Home extends Component {
     render() {
@@ -16,11 +17,11 @@ class Home extends Component {
                                     src="https://qwertify.io/wp-content/uploads/2021/04/Team.jpeg"
                                         />
                                     <Card.Body>
-                                        <Card.Title>Developers</Card.Title>
+                                        <Card.Title>Розробники</Card.Title>
                                         <Card.Text>
                                             Команда 1
                                         </Card.Text>
-                                        <Button variant="primary">About team</Button>
+                                        <Button variant="primary" href="/about-team/dev">About team</Button>
                                     </Card.Body>
                                 </Card>
                            </div>
@@ -35,7 +36,7 @@ class Home extends Component {
                                         <Card.Text>
                                             Команда 2
                                         </Card.Text>
-                                        <Button variant="primary">About team</Button>
+                                        <Button variant="primary" href="/about-team/nature">About team</Button>
                                     </Card.Body>
                                 </Card>
                                 </div>
@@ -51,12 +52,11 @@ class Home extends Component {
                                         <Card.Text>
                                             Команда 3
                                         </Card.Text>
-                                        <Button variant="primary">About team</Button>
+                                        <Button variant="primary" href="/about-team/marketers">About team</Button>
                                     </Card.Body>
                                 </Card>
                             </div>
                         </div>
-
                 </Container>
                 
         );

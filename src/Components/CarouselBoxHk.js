@@ -11,6 +11,7 @@ class CarouselBoxHk extends Component {
             <Carousel>
                 <Carousel.Item>
                     <img
+                    height={800}
                     className="d-block w-100"
                     src={Balloons}
                     alt="Balloons"/>
@@ -22,6 +23,7 @@ class CarouselBoxHk extends Component {
 
                 <Carousel.Item>
                     <img
+                    height={800}
                     className="d-block w-100"
                     src={Forest}
                     alt="Forest"/>
@@ -33,6 +35,7 @@ class CarouselBoxHk extends Component {
 
                 <Carousel.Item>
                     <img
+                    height={800}
                     className="d-block w-100"
                     src={Mountain}
                     alt="Mountain"/>
@@ -44,6 +47,7 @@ class CarouselBoxHk extends Component {
 
                 <Carousel.Item>
                     <img
+                    height={800}
                     className="d-block w-100"
                     src={Scenery}
                     alt="Scenery"/>

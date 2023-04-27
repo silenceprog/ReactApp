@@ -1,62 +1,71 @@
 import React, {Component} from 'react';
-import {Container, Col, Row, Card, ListGroup} from "react-bootstrap";
+import {Container, Col, Row, Card, ListGroup,Button} from "react-bootstrap";
+import Birthday from '../img/birthday.jpg';
+import Summer from "../img/summer.jpg";
+import Sport from "../img/sport.jpeg";
 
 class Blog extends Component {
     render() {
         return (
-            <div>
+            <Container>
                 <Row>
                     <Col md="9">
-                      <div className="d-flex align-items-center me-5">
-                        <div className="flex-shrink-0">
-                            <img
-                            width={150}
-                            height={150}
-                            className="mr-3"
-                            src="https://emgotas.files.wordpress.com/2016/11/what-is-a-team.jpg"
-                            alt="photo" />
-                       </div>
-                       <div className="flex-grow-1 ms-3">
-                        <h5>Blog post</h5>
-                        <p>
-                            Lorem
-                        </p>
-                       </div>
-                     </div>
+                        <Card className="d-flex align-items-center me-5">
+                            <div className="flex-shrink-0">
+                                        <Card.Img 
+                                            width={150}
+                                            height={150}
+                                            className="mr-3"
+                                            src={Birthday}
+                                            alt="photo"
+                                            />
+                            </div>
+                                        <Card.Body className="flex-grow-1 ms-3">
+                                            <Card.Title>Створення сайту</Card.Title>
+                                            <Card.Text>
+                                            Попри складнощі які виникали при створені сайту, сайт готовий до роботи...
+                                            </Card.Text>
+                                            <Button variant="primary" href="/blogs/news/post-start/1">Читати далі</Button>
+                                        </Card.Body>
+                        </Card>
+                      
+                        <Card className="d-flex align-items-center me-5">
+                            <div className="flex-shrink-0">
+                                        <Card.Img 
+                                            width={150}
+                                            height={150}
+                                            className="mr-3"
+                                            src={Summer}
+                                            alt="photo"
+                                            />
+                            </div>
+                                        <Card.Body className="flex-grow-1 ms-3">
+                                            <Card.Title>Ель-Ніньо повернеться: кліматологи прогнозують найспекотніший рік в історії</Card.Title>
+                                            <Card.Text>
+                                            За даними Reuters, Ель-Ніньйо та Ла-Нінья - це характерні для екваторіальної зони Тихого океану...
+                                            </Card.Text>
+                                            <Button variant="primary" href="/blogs/science/post-the-hottest-year/2">Читати далі</Button>
+                                        </Card.Body>
+                        </Card>
 
-                     <div className="d-flex align-items-center me-5">
-                        <div className="flex-shrink-0">
-                            <img
-                                width={150}
-                                height={150}
-                                className="mr-3"
-                                src="https://emgotas.files.wordpress.com/2016/11/what-is-a-team.jpg"
-                                alt="photo" />
-                        </div>
-                        <div className="flex-grow-1 ms-3">
-                            <h5>Blog post</h5>
-                            <p>
-                                Lorem
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="d-flex align-items-center me-5">
-                        <div className="flex-shrink-0">
-                            <img
-                                width={150}
-                                height={150}
-                                className="mr-3"
-                                src="https://emgotas.files.wordpress.com/2016/11/what-is-a-team.jpg"
-                                alt="photo" />
-                        </div>
-                        <div className="flex-grow-1 ms-3">
-                            <h5>Blog post</h5>
-                            <p>
-                                Lorem
-                            </p>
-                        </div>
-                    </div>
+                        <Card className="d-flex align-items-center me-5">
+                            <div className="flex-shrink-0">
+                                        <Card.Img 
+                                            width={150}
+                                            height={150}
+                                            className="mr-3"
+                                            src={Sport}
+                                            alt="photo"
+                                            />
+                            </div>
+                                        <Card.Body className="flex-grow-1 ms-3">
+                                            <Card.Title>Українці Брайнін та Кравченко виграли парний титул на турнірі ITF M15 на Канарах</Card.Title>
+                                            <Card.Text>
+                                            Українські тенісисти Олександр Брайнін і Георгій Кравченко перемогли у парному розряді...
+                                            </Card.Text>
+                                            <Button variant="primary" href="/blogs/sport/post-win-tournament/3">Читати далі</Button>
+                                        </Card.Body>
+                        </Card>
 
                     </Col>
                     <Col md="3">
@@ -64,11 +73,11 @@ class Blog extends Component {
 
                         <Card>
                             <ListGroup variant="flush">
-                                <ListGroup.Item>категорія 1</ListGroup.Item>
-                                <ListGroup.Item>категорія 2</ListGroup.Item>
-                                <ListGroup.Item>категорія 3</ListGroup.Item>
-                                <ListGroup.Item>категорія 4</ListGroup.Item>
-                                <ListGroup.Item>категорія 5</ListGroup.Item>
+                                <ListGroup.Item action href='/blogs/news'>Новини</ListGroup.Item>
+                                <ListGroup.Item action href='/blogs/travel'>Подорожі</ListGroup.Item>
+                                <ListGroup.Item action href='/blogs/medicine'>Медицина</ListGroup.Item>
+                                <ListGroup.Item action href='/blogs/sport'>Спорт</ListGroup.Item>
+                                <ListGroup.Item action href='/blogs/science'>Наука</ListGroup.Item>
                             </ListGroup>
                         </Card>
                         
@@ -84,7 +93,7 @@ class Blog extends Component {
                     </Col>
                 </Row>
 
-            </div>
+            </Container>
         );
     }
 }
