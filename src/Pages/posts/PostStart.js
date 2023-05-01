@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Birthday from '../../img/birthday.jpg';
 import {
     Container,
     Form,
@@ -8,6 +7,7 @@ import {
     Button,
     Image
      } from "react-bootstrap";
+import data from '../../WorkWithBlog';
 
 class PostStart extends Component {
     render() {
@@ -16,10 +16,10 @@ class PostStart extends Component {
                 <Row>
                   <Col>
                         <h1>
-                            Створення сайту
+                          {data[0].title}
                         </h1>
                         <p>
-                         Автор:admin | Дата:20.04.2023
+                         Автор:{data[0].author} | Дата:{data[0].date}
                         </p>
                     </Col>
                 </Row>
@@ -29,15 +29,14 @@ class PostStart extends Component {
                     <Image
                     width={500}
                     height={400}
-                     src={Birthday} fluid />
+                     src={data[0].src} fluid />
                   </Col>
                 </Row>
 
                 <Row>
                   <Col>
                         <p>
-                            Попри складнощі які виникали при створені сайту, сайт готовий до роботи.
-                            Сайт буде дороблюватися для того щоб вирішити незручності користувачів.
+                            {data[0].text}
                         </p>
                     </Col>
                 </Row>

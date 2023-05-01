@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import CarouselBoxHk from "../Components/CarouselBoxHk";
 import {Button, Card, Container} from "react-bootstrap";
+import Developers from "../img/developer.jpg";
+import NatureScience from "../img/natureScience.jpg";
+import Marketers from "../img/marketers.jpg";
 
 
 class Home extends Component {
@@ -13,9 +16,11 @@ class Home extends Component {
                             <div className="col">
                                 <Card className="m-4 text-center" bg="light" border="primary">
                                     <Card.Img
-                                    variant="top"
-                                    src="https://qwertify.io/wp-content/uploads/2021/04/Team.jpeg"
-                                        />
+                                        width={300}
+                                        height={400}
+                                        variant="top"
+                                        src={Developers}
+                                    />
                                     <Card.Body>
                                         <Card.Title>Розробники</Card.Title>
                                         <Card.Text>
@@ -28,8 +33,10 @@ class Home extends Component {
                         <div className="col">
                                 <Card className="m-4 text-center" bg="light">
                                     <Card.Img
+                                        width={300}
+                                        height={400}
                                         variant="top"
-                                        src="https://cdn.vox-cdn.com/thumbor/Ndb49Uk3hjiquS041NDD0tPDPAs=/0x169:1423x914/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/7342855/microsoftteams.0.jpg"
+                                        src={NatureScience}
                                     />
                                     <Card.Body>
                                         <Card.Title>Природознавці</Card.Title>
@@ -44,8 +51,10 @@ class Home extends Component {
                                     <div className="col">
                                 <Card className="m-4 text-center" bg="light">
                                     <Card.Img
+                                        width={300}
+                                        height={400}
                                         variant="top"
-                                        src="https://www.kv.by/sites/default/files/pictures/userpictures/2019/11/29/2359/foto6_1.jpg"
+                                        src={Marketers}
                                     />
                                     <Card.Body>
                                         <Card.Title>Маркетилоги</Card.Title>

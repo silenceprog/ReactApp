@@ -84,7 +84,7 @@ export default function Header(){
 
     return (
           <>
-          <Navbar fixed="top" collapseOnSelect expand="md" bg="dark" variant="dark">
+          <Navbar static="top" collapseOnSelect expand="md" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">
                        <img

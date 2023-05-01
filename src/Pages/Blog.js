@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Col, Row, Card, ListGroup,Button} from "react-bootstrap";
-import Birthday from '../img/birthday.jpg';
-import Summer from "../img/summer.jpg";
-import Sport from "../img/sport.jpeg";
+import data from '../WorkWithBlog';
+
 
 class Blog extends Component {
     render() {
@@ -16,14 +15,14 @@ class Blog extends Component {
                                             width={150}
                                             height={150}
                                             className="mr-3"
-                                            src={Birthday}
+                                            src={data[3].src}
                                             alt="photo"
                                             />
                             </div>
                                         <Card.Body className="flex-grow-1 ms-3">
-                                            <Card.Title>Створення сайту</Card.Title>
+                                            <Card.Title>{data[3].title}</Card.Title>
                                             <Card.Text>
-                                            Попри складнощі які виникали при створені сайту, сайт готовий до роботи...
+                                              {data[3].text}
                                             </Card.Text>
                                             <Button variant="primary" href="/blogs/news/post-start/1">Читати далі</Button>
                                         </Card.Body>
@@ -35,14 +34,14 @@ class Blog extends Component {
                                             width={150}
                                             height={150}
                                             className="mr-3"
-                                            src={Summer}
+                                            src={data[4].src}
                                             alt="photo"
                                             />
                             </div>
                                         <Card.Body className="flex-grow-1 ms-3">
-                                            <Card.Title>Ель-Ніньо повернеться: кліматологи прогнозують найспекотніший рік в історії</Card.Title>
+                                            <Card.Title>{data[4].title}</Card.Title>
                                             <Card.Text>
-                                            За даними Reuters, Ель-Ніньйо та Ла-Нінья - це характерні для екваторіальної зони Тихого океану...
+                                              {data[4].text}
                                             </Card.Text>
                                             <Button variant="primary" href="/blogs/science/post-the-hottest-year/2">Читати далі</Button>
                                         </Card.Body>
@@ -54,14 +53,14 @@ class Blog extends Component {
                                             width={150}
                                             height={150}
                                             className="mr-3"
-                                            src={Sport}
+                                            src={data[5].src}
                                             alt="photo"
                                             />
                             </div>
                                         <Card.Body className="flex-grow-1 ms-3">
-                                            <Card.Title>Українці Брайнін та Кравченко виграли парний титул на турнірі ITF M15 на Канарах</Card.Title>
+                                            <Card.Title>{data[5].title}</Card.Title>
                                             <Card.Text>
-                                            Українські тенісисти Олександр Брайнін і Георгій Кравченко перемогли у парному розряді...
+                                              {data[5].text}
                                             </Card.Text>
                                             <Button variant="primary" href="/blogs/sport/post-win-tournament/3">Читати далі</Button>
                                         </Card.Body>
