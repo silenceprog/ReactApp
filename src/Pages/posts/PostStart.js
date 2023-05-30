@@ -17,33 +17,15 @@ class PostStart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newData: data,
       rating: null
     };
   }
 
   ratePosts = (ratingValue) => {
-    const temp = [...this.state.newData];
-    if (temp[0].isRate === false) {
-      temp[0].countAll++;
-    }
-
-    if(temp[0].countAll !== 0 ){
-      if (temp[0].isRate === true) {
-        temp[0].countAll--;
-      }
-    }
-    else{
-      console.log("Error");
-    }
-    temp[0].isRate =  !temp[0].isRate;
-    this.setState({ newData: temp, rating: ratingValue });
+    ratingValue+=1;
+    this.setState({rating: ratingValue });
   };
 
-  rateIncrement(i){
-    let ratingValue = i+1;
-    return ratingValue;
-  }
 
   render() {
     return (
@@ -80,7 +62,7 @@ class PostStart extends Component {
           <IconButton
             key={i}
             onClick={() => this.ratePosts(i)}
-            style={{color: (i <= this.state.rating) ? 'yellow' : 'black'}}
+            style={{color: (i < this.state.rating) ? 'yellow' : 'black'}}
           >
             <StarIcon />
           </IconButton>

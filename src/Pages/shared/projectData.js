@@ -8,9 +8,7 @@ export const data = [
       +"незручності користувачів.",
       author:"admin", date:"2023-25-04",
       src:Birthday,
-      countAll:0,
       rate:0,
-      isRate:true
     },
     { id:2,
       title:"Ель-Ніньо повернеться: кліматологи прогнозsують найспекотніший рік в історії"
@@ -34,9 +32,7 @@ export const data = [
       +"Больше читайте тут: https://kontrakty.ua/article/216321",
       author:"noname", date:"2023-21-04",
       src:Summer,
-      countAll:0,
       rate:0,
-      isRate:false
     },
       {id:3,
        title:"Українці Брайнін та Кравченко виграли парний титул на турнірі ITF M15 на Канарах",
@@ -52,8 +48,6 @@ export const data = [
       + "Джерело:https://www.ua-football.com/ua/sport/tennis/1682247378-ukrayinci-braynin-ta-kravchenko-vigrali-parniy-titul-na-turniri-itf-m15-na-kanarah.html?utm_source=ukrnet&utm_medium=cpc&utm_campaign=uanewsukrnet",
       author:"noname", date:"2023-22-04",
       src:Sport,
-      countAll:0,
       rate:0, 
-      isRate:false
      }
     ];
