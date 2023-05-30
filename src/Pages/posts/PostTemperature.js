@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Summer from "../../img/summer.jpg";
 import {
     Container,
     Form,
@@ -8,7 +7,8 @@ import {
     Button,
     Image
      } from "react-bootstrap";
-     import data from '../../WorkWithBlog';
+import Summer from '../../img/summer.jpg';
+import { data } from '../shared/projectData';
 
 class PostTemperature extends Component {
     render() {
@@ -30,7 +30,7 @@ class PostTemperature extends Component {
                     <Image
                     width={500}
                     height={400}
-                    src={data[1].src} fluid />
+                    src={Summer} fluid />
                   </Col>
                 </Row>
 

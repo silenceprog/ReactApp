@@ -1,70 +1,59 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {Container, Col, Row, Card, ListGroup,Button} from "react-bootstrap";
-import data from '../WorkWithBlog';
+import { BlogCard } from './BlogComponents/BlogCard';
+import { data } from './shared/projectData';
+import {Pagination} from '../Components/Pagination';
 
 
-class Blog extends Component {
-    render() {
+const Blog = () => {
+    
+   const [dataArr,setDataArr] = useState(data);
+   const [isOldestFirst, setOldestFirst] = useState(true);
+   const [currentPage,setCurrentPage] = useState(1);
+    const [countElemPage] = useState(2);
+    const lastPostIndex = currentPage * countElemPage;
+    const firstPostIndex = lastPostIndex - countElemPage;
+    const currentPost = data.slice(firstPostIndex,lastPostIndex);
+
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+
+    const sortByDate = () => {
+        const temp = [...dataArr];
+        if (isOldestFirst) {
+        temp.sort((a, b) => {
+        if (a.date < b.date) return -1;
+        if (a.date > b.date) return 1;
+        return 0;
+        });
+        setOldestFirst(!isOldestFirst);
+        }
+        else {
+            temp.sort((a, b) => {
+            if (a.date > b.date) return -1;
+            if (a.date < b.date) return 1;
+            return 0;
+            });
+            setOldestFirst(!isOldestFirst);
+            }
+        setDataArr(temp);
+    };
+
+
         return (
             <Container>
                 <Row>
                     <Col md="9">
-                        <Card className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                        <Card.Img 
-                                            width={150}
-                                            height={150}
-                                            className="mr-3"
-                                            src={data[3].src}
-                                            alt="photo"
-                                            />
-                            </div>
-                                        <Card.Body className="flex-grow-1 ms-3">
-                                            <Card.Title>{data[3].title}</Card.Title>
-                                            <Card.Text>
-                                              {data[3].text}
-                                            </Card.Text>
-                                            <Button variant="primary" href="/blogs/news/post-start/1">Читати далі</Button>
-                                        </Card.Body>
-                        </Card>
-                      
-                        <Card className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                        <Card.Img 
-                                            width={150}
-                                            height={150}
-                                            className="mr-3"
-                                            src={data[4].src}
-                                            alt="photo"
-                                            />
-                            </div>
-                                        <Card.Body className="flex-grow-1 ms-3">
-                                            <Card.Title>{data[4].title}</Card.Title>
-                                            <Card.Text>
-                                              {data[4].text}
-                                            </Card.Text>
-                                            <Button variant="primary" href="/blogs/science/post-the-hottest-year/2">Читати далі</Button>
-                                        </Card.Body>
-                        </Card>
-
-                        <Card className="d-flex align-items-center me-5">
-                            <div className="flex-shrink-0">
-                                        <Card.Img 
-                                            width={150}
-                                            height={150}
-                                            className="mr-3"
-                                            src={data[5].src}
-                                            alt="photo"
-                                            />
-                            </div>
-                                        <Card.Body className="flex-grow-1 ms-3">
-                                            <Card.Title>{data[5].title}</Card.Title>
-                                            <Card.Text>
-                                              {data[5].text}
-                                            </Card.Text>
-                                            <Button variant="primary" href="/blogs/sport/post-win-tournament/3">Читати далі</Button>
-                                        </Card.Body>
-                        </Card>
+                    <Button onClick={() => sortByDate()}>Sort by Date</Button>
+                        {dataArr.slice(firstPostIndex,lastPostIndex).map((item,index) => (
+                          <BlogCard
+                          key = {index}
+                          title = {item.title}
+                          text = {item.text}
+                          src = {item.src}
+                          date = {item.date}  
+                          />   
+                        ))}
 
                     </Col>
                     <Col md="3">
@@ -88,13 +77,15 @@ class Blog extends Component {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    
+                    <Pagination
+                countElemPage={countElemPage}
+                totalPosts={data.length}
+                paginate={paginate}
+            />
                     </Col>
                 </Row>
-
             </Container>
         );
     }
-}
 
 export default Blog;

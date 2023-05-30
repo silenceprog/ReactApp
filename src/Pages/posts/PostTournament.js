@@ -7,7 +7,8 @@ import {
     Button,
     Image
      } from "react-bootstrap";
-import data from '../../WorkWithBlog';
+import Sport from '../../img/sport.jpeg';
+import { data } from '../shared/projectData';
 
 class PostTournament extends Component {
     render() {
@@ -16,7 +17,7 @@ class PostTournament extends Component {
                  <Row>
                   <Col>
                         <h1>
-                          {data[2].title}
+                          {data.title}
                         </h1>
                         <p>
                          Автор:{data[2].author} | Дата:{data[2].date}
@@ -29,7 +30,7 @@ class PostTournament extends Component {
                     <Image
                     width={500}
                     height={400}
-                    src={data[2].src} fluid />
+                    src={Sport} fluid />
                   </Col>
                 </Row>
 
