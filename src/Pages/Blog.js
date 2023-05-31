@@ -3,6 +3,7 @@ import {Container, Col, Row, Card, ListGroup,Button} from "react-bootstrap";
 import { BlogCard } from './BlogComponents/BlogCard';
 import { data } from './shared/projectData';
 import {Pagination} from '../Components/Pagination';
+import Categories from '../Components/Categories';
 
 
 const Blog = () => {
@@ -39,12 +40,22 @@ const Blog = () => {
         setDataArr(temp);
     };
 
+    const chooseCategory = (category) => {
+        if(category === "all"){
+            setDataArr(dataArr);
+        }
+        else{
+        setDataArr(data.filter(el => el.category === category));
+        }
+    }
+
 
         return (
             <Container>
                 <Row>
                     <Col md="9">
                     <Button onClick={() => sortByDate()}>Sort by Date</Button>
+                    <Categories chooseCategory={chooseCategory}/>
                         {dataArr.slice(firstPostIndex,lastPostIndex).map((item,index) => (
                           <BlogCard
                           key = {index}

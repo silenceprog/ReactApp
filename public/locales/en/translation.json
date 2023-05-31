@@ -1,0 +1,13 @@
+{
+    "main":{
+        "team-header": "Our team",
+        "team-name-1":"Developers",
+        "team-name-2":"NaturalScientists",
+        "team-name-3":"Marketers",
+        "team-desc-1":"Team 1",
+        "team-desc-2":"Team 2",
+        "team-desc-3":"Team 3",
+        "btn-text":"About team"
+
+    }
+}
