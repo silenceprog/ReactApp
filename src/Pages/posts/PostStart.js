@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import {
   Container,
-  Form,
   Row,
   Col,
-  Button,
   Image
 } from "react-bootstrap";
 import StarIcon from '@mui/icons-material/Star';
 
 import { data } from '../shared/projectData';
 import { IconButton } from '@mui/material';
+import { Database } from '../../Components/Database';
 
 
 class PostStart extends Component {
@@ -67,13 +66,7 @@ class PostStart extends Component {
             <StarIcon />
           </IconButton>
         ))}
-        <Form>
-          <Form.Group className="mb-3" >
-            <Form.Label>Залишити коментар:</Form.Label>
-            <Form.Control as="textarea" rows={3} />
-          </Form.Group>
-          <Button variant="primary">Відправити</Button>
-        </Form>
+        <Database />
 
       </Container>
     )

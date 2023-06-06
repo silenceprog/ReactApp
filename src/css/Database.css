@@ -1,0 +1,16 @@
+.message-block {
+    background: #eee;
+    border: 1px solid #8A8A8A;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+   }
+
+.time-display{
+    margin-left: 90%;
+}
+
+.text-message{
+    resize: none;
+}

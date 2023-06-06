@@ -14,7 +14,6 @@ const Blog = () => {
     const [countElemPage] = useState(2);
     const lastPostIndex = currentPage * countElemPage;
     const firstPostIndex = lastPostIndex - countElemPage;
-    const currentPost = data.slice(firstPostIndex,lastPostIndex);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -42,7 +41,7 @@ const Blog = () => {
 
     const chooseCategory = (category) => {
         if(category === "all"){
-            setDataArr(dataArr);
+            setDataArr(data);
         }
         else{
         setDataArr(data.filter(el => el.category === category));
@@ -65,6 +64,10 @@ const Blog = () => {
                           date = {item.date}  
                           />   
                         ))}
+                         <Pagination
+                countElemPage={countElemPage}
+                totalPosts={data.length}
+                paginate={paginate}/>
 
                     </Col>
                     <Col md="3">
@@ -88,11 +91,7 @@ const Blog = () => {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                    <Pagination
-                countElemPage={countElemPage}
-                totalPosts={data.length}
-                paginate={paginate}
-            />
+                   
                     </Col>
                 </Row>
             </Container>
