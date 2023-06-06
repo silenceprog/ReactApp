@@ -53,7 +53,7 @@ const Blog = () => {
             <Container>
                 <Row>
                     <Col me="9">
-                    <Button onClick={() => sortByDate()}>Sort by Date</Button>
+                    <Button onClick={() => sortByDate()}>Дата ↑↓</Button>
                     <Categories chooseCategory={chooseCategory}/>
                         {dataArr.slice(firstPostIndex,lastPostIndex).map((item,index) => (
                           <BlogCard
