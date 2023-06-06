@@ -52,7 +52,7 @@ const Blog = () => {
         return (
             <Container>
                 <Row>
-                    <Col md="9">
+                    <Col me="9">
                     <Button onClick={() => sortByDate()}>Sort by Date</Button>
                     <Categories chooseCategory={chooseCategory}/>
                         {dataArr.slice(firstPostIndex,lastPostIndex).map((item,index) => (
@@ -69,29 +69,6 @@ const Blog = () => {
                 totalPosts={data.length}
                 paginate={paginate}/>
 
-                    </Col>
-                    <Col md="3">
-                        <h5 className="text-center mt-5">Категорії</h5>
-
-                        <Card>
-                            <ListGroup variant="flush">
-                                <ListGroup.Item action href='/blogs/news'>Новини</ListGroup.Item>
-                                <ListGroup.Item action href='/blogs/travel'>Подорожі</ListGroup.Item>
-                                <ListGroup.Item action href='/blogs/medicine'>Медицина</ListGroup.Item>
-                                <ListGroup.Item action href='/blogs/sport'>Спорт</ListGroup.Item>
-                                <ListGroup.Item action href='/blogs/science'>Наука</ListGroup.Item>
-                            </ListGroup>
-                        </Card>
-                        
-                        <Card className="mt-3 bg-light">
-                        <Card.Body>
-                            <Card.Title>Slide widget</Card.Title>
-                            <Card.Text>
-                                Lorem
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                   
                     </Col>
                 </Row>
             </Container>
