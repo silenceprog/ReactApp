@@ -13,7 +13,6 @@ const Blog = () => {
     const [countElemPage] = useState(2);
     const lastPostIndex = currentPage * countElemPage;
     const firstPostIndex = lastPostIndex - countElemPage;
-    const currentPost = data.slice(firstPostIndex,lastPostIndex);
 
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -43,8 +42,8 @@ const Blog = () => {
         return (
             <Container>
                 <Row>
-                    <Col md="9">
-                    <Button onClick={() => sortByDate()}>Sort by Date</Button>
+                    <Col me="9">
+                    <Button onClick={() => sortByDate()}>Дата ↑↓</Button>
                         {dataArr.slice(firstPostIndex,lastPostIndex).map((item,index) => (
                           <BlogCard
                           key = {index}
@@ -54,34 +53,11 @@ const Blog = () => {
                           date = {item.date}  
                           />   
                         ))}
-
-                    </Col>
-                    <Col md="3">
-                        <h5 className="text-center mt-5">Категорії</h5>
-
-                        <Card>
-                            <ListGroup variant="flush">
-                                <ListGroup.Item action href='/blogs/news'>Новини</ListGroup.Item>
-                                <ListGroup.Item action href='/blogs/travel'>Подорожі</ListGroup.Item>
-                                <ListGroup.Item action href='/blogs/medicine'>Медицина</ListGroup.Item>
-                                <ListGroup.Item action href='/blogs/sport'>Спорт</ListGroup.Item>
-                                <ListGroup.Item action href='/blogs/science'>Наука</ListGroup.Item>
-                            </ListGroup>
-                        </Card>
-                        
-                        <Card className="mt-3 bg-light">
-                        <Card.Body>
-                            <Card.Title>Slide widget</Card.Title>
-                            <Card.Text>
-                                Lorem
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    <Pagination
+                         <Pagination
                 countElemPage={countElemPage}
                 totalPosts={data.length}
-                paginate={paginate}
-            />
+                paginate={paginate}/>
+
                     </Col>
                 </Row>
             </Container>
