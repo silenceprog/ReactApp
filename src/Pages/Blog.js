@@ -51,6 +51,7 @@ const Blog = () => {
                           text = {item.text}
                           src = {item.src}
                           date = {item.date}  
+                          href = {item.href}
                           />   
                         ))}
                          <Pagination

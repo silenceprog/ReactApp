@@ -8,7 +8,6 @@ import {
   Image
 } from "react-bootstrap";
 import StarIcon from '@mui/icons-material/Star';
-
 import { data } from '../shared/projectData';
 import { IconButton } from '@mui/material';
 
@@ -22,8 +21,8 @@ class PostStart extends Component {
   }
 
   ratePosts = (ratingValue) => {
-    ratingValue+=1;
-    this.setState({rating: ratingValue });
+    ratingValue += 1;
+    this.setState({ rating: ratingValue });
   };
 
 
@@ -58,11 +57,11 @@ class PostStart extends Component {
           </Col>
         </Row>
 
-        {[...Array(5)].map((_,i) => (
+        {[...Array(5)].map((_, i) => (
           <IconButton
             key={i}
             onClick={() => this.ratePosts(i)}
-            style={{color: (i < this.state.rating) ? 'yellow' : 'black'}}
+            style={{ color: (i < this.state.rating) ? 'yellow' : 'black' }}
           >
             <StarIcon />
           </IconButton>

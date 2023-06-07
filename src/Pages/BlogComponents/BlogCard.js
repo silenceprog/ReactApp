@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button } from "react-bootstrap";
 
-export const BlogCard = ({ title, text, src, date }) => {
+export const BlogCard = ({ title, text, src, date, href }) => {
 
     return (
         <Card className="d-flex align-items-center me-5">
@@ -19,7 +19,7 @@ export const BlogCard = ({ title, text, src, date }) => {
                 <Card.Text>
                     {text}
                 </Card.Text>
-                <Button variant="primary" href="/blogs/news/post-start/1">Читати далі</Button>
+                <Button variant="primary" href={href}>Читати далі</Button>
                 <Card.Footer>
                     Дата:{date}
                 </Card.Footer>
