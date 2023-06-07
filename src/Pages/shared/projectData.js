@@ -9,10 +9,10 @@ export const data = [
       author:"admin", date:"2023-25-04",
       src:Birthday,
       rate:0,
-      category:"main"
+      href:"/blogs/news/post-start/1"
     },
     { id:2,
-      title:"Ель-Ніньо повернеться: кліматологи прогнозують найспекотніший рік в історії"
+      title:"Ель-Ніньо повернеться: кліматологи прогнозsують найспекотніший рік в історії"
       +"Джерело: https://kontrakty.ua/article/216321",
       text:"За даними Reuters, Ель-Ніньйо та Ла-Нінья - це характерні для екваторіальної зони Тихого океану протилежні екстремальні"
       +"значення температури води й атмосферного тиску. Феномен Ель-Ніньйо полягає в різкому підвищенні температури (на 5-9 °C)"
@@ -34,7 +34,7 @@ export const data = [
       author:"noname", date:"2023-21-04",
       src:Summer,
       rate:0,
-      category:"science"
+      href:"/blogs/science/post-the-hottest-year/2"
     },
       {id:3,
        title:"Українці Брайнін та Кравченко виграли парний титул на турнірі ITF M15 на Канарах",
@@ -51,6 +51,6 @@ export const data = [
       author:"noname", date:"2023-22-04",
       src:Sport,
       rate:0, 
-      category:"sport"
+      href:"/blogs/sport/post-win-tournament/3"
      }
     ];
