@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CarouselBoxHk from "../Components/CarouselBoxHk";
 import {Button, Card, CardImg, Container} from "react-bootstrap";
+import Team from '../img/team.jpg';
 
 class Home extends Component {
     render() {
@@ -13,7 +14,7 @@ class Home extends Component {
                                 <Card className="m-4 text-center" bg="light" border="primary">
                                     <Card.Img
                                     variant="top"
-                                    src="https://qwertify.io/wp-content/uploads/2021/04/Team.jpeg"
+                                    src={Team}
                                         />
                                     <Card.Body>
                                         <Card.Title>Developers</Card.Title>
