@@ -12,11 +12,6 @@ import Home from "./Pages/Home";
 import Contacts from "./Pages/Contacts";
 import About from "./Pages/About";
 import Blog from "./Pages/Blog";
-import Medicine from "./Pages/categories/Medicine";
-import News from "./Pages/categories/News";
-import Travel from "./Pages/categories/Travel";
-import Sport from "./Pages/categories/Sport";
-import Science from "./Pages/categories/Science";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Developers from "./Pages/Developers";
 import NaturalScientists from "./Pages/NaturalScientists";
@@ -162,11 +157,6 @@ export default function Header(){
                 <Route path="/about-team/dev" element={<Developers />}/>
                 <Route path="/about-team/nature" element={<NaturalScientists/>}/>
                 <Route path="/about-team/marketers" element={<Marketers/>}/>
-                <Route path="/blogs/news" element={<News/>}/>
-                <Route path="/blogs/medicine" element={<Medicine/>}/>
-                <Route path="/blogs/sport" element={<Sport/>}/>
-                <Route path="/blogs/travel" element={<Travel/>}/>
-                <Route path="/blogs/science" element={<Science/>}/>
                 <Route path="/blogs/news/post-start/1" element={<PostStart/>}/>
                 <Route path="/blogs/science/post-the-hottest-year/2" element={<PostTemperature/>}/>
                 <Route path="/blogs/sport/post-win-tournament/3" element={<PostTournament/>}/>

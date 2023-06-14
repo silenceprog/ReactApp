@@ -40,11 +40,13 @@ const Blog = () => {
     };
 
     const chooseCategory = (category) => {
+        const temp = [...data];
+        
         if(category === "all"){
             setDataArr(data);
         }
         else{
-        setDataArr(data.filter(el => el.category === category));
+        setDataArr(temp.filter(el => el.category === category));
         }
     }
 

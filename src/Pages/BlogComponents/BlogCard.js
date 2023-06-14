@@ -19,10 +19,7 @@ export const BlogCard = ({ title, text, src, date, href }) => {
                 <Card.Text>
                     {text}
                 </Card.Text>
-                <Button variant="primary" href={href}>Читати далі</Button>
-                <Card.Footer>
-                    Дата:{date}
-                </Card.Footer>
+                    <Button variant="primary" href={href}>Читати далі</Button>
             </Card.Body>
         </Card>
 

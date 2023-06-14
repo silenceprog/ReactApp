@@ -9,7 +9,8 @@ export const data = [
       author:"admin", date:"2023-25-04",
       src:Birthday,
       rate:0,
-      href:"/blogs/news/post-start/1"
+      href:"/blogs/news/post-start/1",
+      category:"main"
     },
     { id:2,
       title:"Ель-Ніньо повернеться: кліматологи прогнозsують найспекотніший рік в історії"
@@ -34,7 +35,8 @@ export const data = [
       author:"noname", date:"2023-21-04",
       src:Summer,
       rate:0,
-      href:"/blogs/science/post-the-hottest-year/2"
+      href:"/blogs/science/post-the-hottest-year/2",
+      category:"science"
     },
       {id:3,
        title:"Українці Брайнін та Кравченко виграли парний титул на турнірі ITF M15 на Канарах",
@@ -51,6 +53,7 @@ export const data = [
       author:"noname", date:"2023-22-04",
       src:Sport,
       rate:0, 
-      href:"/blogs/sport/post-win-tournament/3"
+      href:"/blogs/sport/post-win-tournament/3",
+      category:"sport"
      }
     ];

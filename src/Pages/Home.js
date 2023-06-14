@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import CarouselBoxHk from "../Components/CarouselBoxHk";
 import {Button, Card, Container} from "react-bootstrap";
 import Developers from "../img/developer.jpg";
